@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: linear-gradient(180deg, rgba(33, 192, 139, 1) 0%, rgba(143, 87, 253, 1) 100%);
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Header */
+
+header{
+    padding: 2em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header figure{
+    width: 15em;
+}
+
+header figure img{
+    width: 100%;
+    vertical-align: top;
+}
+
+/* header .menu{
+cuando pongo relative me da problema
+No es que de problema, simplemente el elemento absolute pasa a definir su posicion a partir de este elemento
+y no desde el body
+
+cuando no es relative la posicion del nav se calculara a partir del body por lo cual si se dice top: 5em debe ser esta medida
+a partir del body, sea lo que sea.
+
+Mientras que cuando es relative es apartir del .menu sea lo que sea
+
+Debo reforzar position
+} */
+
+header .menu .perfil{
+    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .menu .perfil figure{
+    width: 3.5em;
+}
+
+header .menu .perfil figure img{
+    width: 100%;
+}
+
+header .menu .perfil p{
+    font-size: 1.6em;
+    color: white;
+}
+
+header .menu:hover nav{
+    display: block;
+}
+
+header .menu nav{
+    display: none;
+    position: absolute;
+    right: 1.9em;
+    top: 5em;
+    text-align: right;
+}
+header .menu nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    display: block;
+    margin: 1em 0;
+}
+
+/* Main */
+
+main .iniciar-sesion{
+    padding: 2rem;
+    height: 80em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .iniciar-sesion h1{
+    font-size: 2em;
+    color: white;
+    align-self: flex-start;
+}
+
+main .iniciar-sesion form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main .iniciar-sesion form input[type="email"],
+main .iniciar-sesion form input[type="password"]{
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: rgba(211, 211, 211, 0);
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Mulish', sans-serif;
+}
+
+main .iniciar-sesion form input[type="email"]:hover,
+main .iniciar-sesion form input[type="password"]:hover{
+    outline: none;
+}
+
+::placeholder{
+    color: white;
+}
+
+main .iniciar-sesion form input[type="submit"]{
+    padding: 2rem;
+    border-radius: 50px;
+    border: none;
+    width: 80%;
+    font-size: 1.5em;
+    color: white;
+    background-color: hsla(0, 0%, 87%, 0.329);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+main .iniciar-sesion form input[type="submit"]:hover{
+    outline: none;
+}
+main .iniciar-sesion .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.5em;
+}
+
+main .iniciar-sesion .info a{
+    text-decoration: none;
+    color: white;
+}
+
+main .iniciar-sesion .info a:hover{
+    text-decoration: underline;
+}
+
+main .iniciar-sesion .alter-iniciosesion{
+    align-self: flex-start;
+}
+
+main .iniciar-sesion .alter-iniciosesion > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .iniciar-sesion .alter-iniciosesion > div figure{
+    width: 11%;
+    margin-right: 1rem;
+}
+
+main .iniciar-sesion .alter-iniciosesion > div figure img{
+    width: 100%;
+    vertical-align: top;
+}
+
+main .iniciar-sesion .alter-iniciosesion > div p{
+    color: white;
+    font-size: 1.5em;
+}
+
+main .iniciar-sesion > p{
+    font-size: 1.8em;
+    color: white;
+    font-weight: 200;
+}
+
+main .iniciar-sesion p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+/* Recuerda que tienes diferentes selectores, debes practicarlos */
+
+/* Footer */
+
+footer hgroup{
+    text-align: center;
+    color: white;
+}
+
+footer hgroup h3{
+    font-size: 1.5em;
+    padding: 1rem 0;
+    border-bottom: 1px solid white;
+}

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: linear-gradient(180deg, rgba(33, 192, 139, 1) 0%, rgba(143, 87, 253, 1) 100%);
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Header */
+
+header{
+    padding: 2em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header figure{
+    width: 15em;
+}
+
+header figure img{
+    width: 100%;
+    vertical-align: top;
+}
+
+/* header .menu{
+cuando pongo relative me da problema
+No es que de problema, simplemente el elemento absolute pasa a definir su posicion a partir de este elemento
+y no desde el body
+
+cuando no es relative la posicion del nav se calculara a partir del body por lo cual si se dice top: 5em debe ser esta medida
+a partir del body, sea lo que sea.
+
+Mientras que cuando es relative es apartir del .menu sea lo que sea
+
+Debo reforzar position
+} */
+
+header .menu .perfil{
+    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .menu .perfil figure{
+    width: 3.5em;
+}
+
+header .menu .perfil figure img{
+    width: 100%;
+}
+
+header .menu .perfil p{
+    font-size: 1.6em;
+    color: white;
+}
+
+header .menu:hover nav{
+    display: block;
+}
+
+header .menu nav{
+    display: none;
+    position: absolute;
+    right: 1.9em;
+    top: 5em;
+    text-align: right;
+}
+header .menu nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    display: block;
+    margin: 1em 0;
+}
+
+/* Main */
+
+/* Section error */
+
+main section{
+    height: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+
+main section figure{
+    width: 25%;
+}
+
+main section figure img{
+    width: 100%;
+    vertical-align: top;
+}
+
+@keyframes movimiento{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2); opacity: 0;}
+    100%{transform: scale(1);}
+}
+
+main section h1{
+    font-size: 10em;
+    color: white;
+    animation: movimiento 2s ease infinite;
+}
+
+main section p{
+    font-size: 3em;
+    text-align: center;
+    color: white;
+}
+
+/* Footer */
+
+footer hgroup{
+    text-align: center;
+    color: white;
+}
+
+footer hgroup h3{
+    font-size: 1.5em;
+    padding: 1rem 0;
+    border-bottom: 1px solid white;
+}
